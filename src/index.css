@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Smooth transitions */
+* {
+  transition-property: background-color, border-color, color, opacity;
+  transition-duration: 150ms;
+}
+
+/* Table styles */
+table {
+  border-collapse: collapse;
+}
+
+/* Animation for notification */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in {
+  animation: slideIn 0.3s ease-out;
+}
+
+/* Print styles */
+@media print {
+  nav, header, footer, button {
+    display: none !important;
+  }
+  main {
+    padding: 0 !important;
+  }
+}
+
+/* Responsive table fix */
+.overflow-x-auto {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Focus styles */
+input:focus, select:focus, button:focus-visible {
+  outline: 2px solid #6366f1;
+  outline-offset: 2px;
+}
